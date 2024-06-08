@@ -30,7 +30,7 @@
             android:layout_gravity="center"
             android:layout_marginStart="30dp"
             android:layout_weight="0"
-            android:text="Thông tin nhân viên"
+            android:text="Thêm đơn vị"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -39,25 +39,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
         android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
-            android:background="@drawable/user" />
+            android:background="@drawable/unitt" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
             android:text="Chọn ảnh"
             android:textSize="20sp"
             android:textStyle="bold" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -72,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingLeft="10dp"
-            android:text="Mã đơn vị"
+            android:text="Mã đơn vị cha"
             android:textSize="20sp" />
 
         <EditText
@@ -95,53 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingLeft="10dp"
-            android:text="Mã nhân viên"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/editTextText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="5"
-            android:inputType="text" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:text="Họ tên"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/editTextText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="5"
-            android:inputType="text" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:text="Chức vụ"
+            android:text="Tên đơn vị"
             android:textSize="20sp" />
 
         <EditText
@@ -165,6 +121,29 @@
             android:layout_weight="1"
             android:paddingLeft="10dp"
             android:text="Email"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="5"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Website"
             android:textSize="20sp" />
 
         <EditText
@@ -211,7 +190,9 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:backgroundTint="#03A9F4"
-            android:text="Cập nhật"
+            android:text="Lưu mới"
+            android:textSize="20sp"
             app:cornerRadius="10dp" />
     </LinearLayout>
+
 </LinearLayout>

@@ -30,7 +30,7 @@
             android:layout_gravity="center"
             android:layout_marginStart="30dp"
             android:layout_weight="0"
-            android:text="Quản lí danh bạ"
+            android:text="Thông tin đơn vị"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -190,7 +190,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:backgroundTint="#03A9F4"
-            android:text="Lưu"
+            android:text="Cập nhật"
             app:cornerRadius="10dp" />
     </LinearLayout>
 

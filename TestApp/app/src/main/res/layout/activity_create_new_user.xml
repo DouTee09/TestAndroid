@@ -30,7 +30,7 @@
             android:layout_gravity="center"
             android:layout_marginStart="30dp"
             android:layout_weight="0"
-            android:text="Thông tin nhân viên"
+            android:text="Thêm nhân viên"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -211,7 +211,8 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:backgroundTint="#03A9F4"
-            android:text="Cập nhật"
+            android:text="Lưu mới"
+            android:textSize="20sp"
             app:cornerRadius="10dp" />
     </LinearLayout>
 </LinearLayout>

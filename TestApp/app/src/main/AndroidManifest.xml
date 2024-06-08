@@ -13,6 +13,12 @@
         android:theme="@style/Theme.TestApp"
         tools:targetApi="31">
         <activity
+            android:name=".CreateNewUnitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateNewUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".FindUnitActivity"
             android:exported="false" />
         <activity
