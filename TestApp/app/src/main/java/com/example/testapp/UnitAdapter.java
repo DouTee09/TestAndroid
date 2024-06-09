@@ -21,20 +21,26 @@ public class UnitAdapter extends ArrayAdapter<Unit> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = convertView;
-        if (view == null) {
+        ViewHolder viewHolder;
+        if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(mContext);
-            view = inflater.inflate(mResource, null);
+            convertView = inflater.inflate(mResource, parent, false);
+            viewHolder = new ViewHolder();
+            viewHolder.textViewUnitName = convertView.findViewById(R.id.tvTenDonVi);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
         }
 
         Unit unit = getItem(position);
         if (unit != null) {
-            TextView textViewUnitName = view.findViewById(R.id.tvTenDonVi);
-            if (textViewUnitName != null) {
-                textViewUnitName.setText(unit.getTenDonVi());
-            }
+            viewHolder.textViewUnitName.setText(unit.getTenDonVi());
         }
 
-        return view;
+        return convertView;
+    }
+
+    static class ViewHolder {
+        TextView textViewUnitName;
     }
 }

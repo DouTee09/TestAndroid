@@ -3,23 +3,21 @@ package com.example.testapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +30,7 @@ public class UnitMainActivity extends AppCompatActivity {
     private UnitAdapter unitAdapter;
     private List<Unit> unitList;
     private DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,6 +90,16 @@ public class UnitMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UnitMainActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        lvDanhSachDonVi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Unit selectedUnit = unitList.get(position);
+                Intent intent = new Intent(UnitMainActivity.this, InformationUnitActivity.class);
+                intent.putExtra("unit", selectedUnit);
                 startActivity(intent);
             }
         });

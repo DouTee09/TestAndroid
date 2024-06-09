@@ -1,6 +1,8 @@
 package com.example.testapp;
 
-public class Unit {
+import java.io.Serializable;
+
+public class Unit implements Serializable {
     private String madonvi;
     private String tendonvi;
     private String email;

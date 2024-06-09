@@ -7,7 +7,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -18,17 +17,14 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseDatabaseHelperStaff staffHelper;
     private ListView listViewStaff;
     private StaffAdapter staffAdapter;
-    private List<Staff> staffList;
-
+    private ArrayList<Staff> staffList;
     private Button btnDonVi;
     private ImageView imvThemNhanVien;
     private ImageView imvTimKiem;
@@ -44,16 +40,16 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        staffHelper = new FirebaseDatabaseHelperStaff();
         listViewStaff = findViewById(R.id.ListViewStaff);
-        staffList = new ArrayList<>();
-        staffAdapter = new StaffAdapter(this, R.layout.item_listview, staffList);
-        listViewStaff.setAdapter(staffAdapter);
-
         btnDonVi = findViewById(R.id.btDonVi);
         imvThemNhanVien = findViewById(R.id.imvThemNhanVien);
         imvTimKiem = findViewById(R.id.imvTimKiem);
 
+        staffList = new ArrayList<>();
+        staffAdapter = new StaffAdapter(this, staffList);
+        listViewStaff.setAdapter(staffAdapter);
+
+        staffHelper = new FirebaseDatabaseHelperStaff();
         DatabaseReference staffRef = staffHelper.getReference();
         staffRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -105,6 +101,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }

@@ -7,6 +7,7 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:background="#FFFFFF"
+    android:descendantFocusability="blocksDescendants"
     android:paddingTop="5dp"
     android:paddingEnd="5dp">
 
@@ -14,7 +15,9 @@
         android:id="@+id/imageButton2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@drawable/unitt" />
+        android:background="@drawable/unitt"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
 
     <TextView
         android:id="@+id/tvTenDonVi"
@@ -23,13 +26,9 @@
         android:layout_gravity="center"
         android:layout_marginStart="20dp"
         android:layout_weight="1"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:text="Đơn vị A"
         android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:background="@drawable/delete" />
 </LinearLayout>
