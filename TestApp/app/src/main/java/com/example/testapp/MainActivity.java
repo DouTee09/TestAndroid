@@ -99,11 +99,12 @@ public class MainActivity extends AppCompatActivity {
         listViewStaff.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Staff selectedStaff = staffList.get(position);
                 Intent intent = new Intent(MainActivity.this, InformationUserActivity.class);
+                intent.putExtra("staff", selectedStaff);
                 startActivity(intent);
             }
         });
-
 
     }
 }

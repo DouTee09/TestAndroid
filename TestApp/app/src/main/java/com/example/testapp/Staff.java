@@ -1,6 +1,8 @@
 package com.example.testapp;
 
-public class Staff {
+import java.io.Serializable;
+
+public class Staff implements Serializable {
     private String manhanvien;
     private String hoten;
     private String chucvu;
