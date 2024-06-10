@@ -15,54 +15,58 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imvQuayLai"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_weight="0"
             android:backgroundTintMode="add"
-            app:srcCompat="@drawable/contact512" />
+            app:srcCompat="@drawable/arrow_back" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="10dp"
             android:layout_weight="0"
-            android:text="Quản lí danh bạ"
-            android:textSize="30sp"
+            android:text="Tìm kiếm nhân viên"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="70dp"
         android:layout_gravity="right"
         android:layout_marginTop="20dp"
         android:layout_weight="0"
+        android:background="@android:drawable/editbox_background_normal"
         android:orientation="horizontal"
         android:textAlignment="textEnd">
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="0"
-            android:background="@drawable/search" />
-
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/edtSearch"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="0"
             android:backgroundTint="#FFFFFF"
             android:ems="10"
             android:hint="Nhập tên để tìm ..."
-            android:inputType="text" />
+            android:inputType="text"
+            android:paddingStart="20dp" />
+
+        <ImageView
+            android:id="@+id/imvTimKiem"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0"
+            android:background="@drawable/search" />
 
     </LinearLayout>
 
@@ -85,6 +89,7 @@
         android:orientation="vertical">
 
         <ListView
+            android:id="@+id/lvDanhSachNhanVien"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
@@ -92,5 +97,4 @@
             android:scrollbars="none"
             tools:listitem="@layout/item_listview" />
     </LinearLayout>
-
 </LinearLayout>
