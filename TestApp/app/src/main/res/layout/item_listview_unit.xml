@@ -30,5 +30,4 @@
         android:focusableInTouchMode="false"
         android:text="Đơn vị A"
         android:textSize="20sp" />
-
 </LinearLayout>

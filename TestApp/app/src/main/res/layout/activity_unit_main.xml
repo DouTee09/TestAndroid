@@ -109,5 +109,4 @@
             android:scrollbarSize="0dp"
             tools:listitem="@layout/item_listview_unit" />
     </LinearLayout>
-
 </LinearLayout>

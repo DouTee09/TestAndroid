@@ -228,5 +228,4 @@
             android:text="Xóa"
             app:cornerRadius="10dp" />
     </LinearLayout>
-
 </LinearLayout>
